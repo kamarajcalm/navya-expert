@@ -1,0 +1,153 @@
+
+
+.login-container-page {
+
+  .ion-page {
+    justify-content: flex-start;
+  }
+
+  .main-login-container {
+    overflow: auto;
+  }
+
+  .close-btn {
+    font-size: 30px;
+    margin-top: -15px;
+    background: var(--ion-avatar-color);
+    border-radius: 50%;
+    color: #fff;
+    border: 3px solid var(--ion-avatar-color);
+    left: 10px;
+  }
+
+  text-align: center;
+
+  .page-header-container ion-toolbar {
+    --background: none; // var(--ion-avatar-login-background-color);
+    --ion-text-color: var(--ion-color-dark);
+  }
+
+  .ion-img {
+    height: 70px;
+    width: 300px;
+    margin: 0 auto;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .bottom-logo-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    .ion-img {
+      max-width: 150px;
+
+      &:first-child {
+        width: 75px;
+        margin-right: 25px;
+      }
+    }
+
+  }
+
+  .ion-page {
+    background: var(--ion-avatar-login-background-color);
+  }
+
+}
+
+.login-container-page-ah {
+  .ion-page {
+    background-image: -webkit-gradient(linear,left top,right top,from(#00def5),to(#941eff));
+    background-image: gradient(linear,left top,right top,from(#00def5),to(#941eff));
+  }
+}
+
+.login-container {
+
+  ion-button {
+    margin-top: 40px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+  }
+
+}
+
+.mskcc .login-outer-container, .pm .login-outer-container, .accesshope .login-outer-container {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  margin: 25px auto 40px auto;
+
+  .divider {
+    height: 225px;
+    background: #fff;
+    width: 1px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-self: center;
+  }
+}
+
+.mskcc .login-container, .pm .login-container, .accesshope .login-container {
+
+  color: #ffffff;
+
+  ion-item {
+    border-color: var(--ion-avatar-color);
+  }
+
+   .close-btn {
+     color: #fff;
+     border-color: #fff;
+   }
+}
+
+.mskcc .authentication-container, .pm .authentication-container, .accesshope .authentication-container {
+
+    ion-button {
+      font-weight: bold;
+      border: 2px solid #fff;
+       --background: rgba(0,0,0,0.35);
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+  .mskcc .login-outer-container, .pm .login-outer-container, .accesshope .login-outer-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    .header {
+      max-width: 250px;
+      margin: auto;
+    }
+
+    .login-container {
+
+      form {
+        margin-top: 20px;
+      }
+
+      ion-button {
+        margin-top: 30px;
+      }
+    }
+
+    .divider {
+      margin-top: 5px;
+      height: 1px;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.weekly-heading {
+  position: relative;
+
+ h2 {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: var(--ion-avatar-text-color);
+    letter-spacing: 0.5px;
+  }
+}
+
+
+.xe-content {
+  padding: 20px;
+  font-weight: bold;
+  border: 1px solid #c8c8c8;
+  margin: 40px 10px;
+  text-align: center;
+}

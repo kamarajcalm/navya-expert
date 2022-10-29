@@ -1,0 +1,38 @@
+.Modal {
+    height: fit-content;
+    width: fit-content;
+    outline: none;
+    // border-radius: 10px;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    background-color: #fff;
+    transform: "translate(-50%, -50%)";
+    // margin-bottom: 10px;
+  }
+  
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width:320px) and (max-width: 450px) {
+    .Overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+  }

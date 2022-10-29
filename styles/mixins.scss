@@ -1,0 +1,4 @@
+@mixin surveyTabHighlightedColor($color) {
+  color: $color;
+  border-bottom-color: $color;
+}

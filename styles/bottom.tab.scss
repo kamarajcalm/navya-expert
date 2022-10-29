@@ -1,0 +1,48 @@
+
+ion-tab-bar {
+  height: 50px;
+
+  ion-tab-button {
+    --color: #a8a8a8;
+    --color-selected: var(--ion-avatar-bottom-navbar);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+
+    ion-icon {
+      margin-top: unset;
+      margin-bottom: unset;
+      overflow: hidden;
+      width: 35px;
+      height: 35px;
+      position: relative;
+
+      &:before {
+        font-size: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0.9);
+      }
+
+      &.navya-icon-surveys, &.navya-icon-home {
+        &:before {
+          top: 1px;
+          font-size: 42px;
+          position: absolute;
+          left: -3px;
+        }
+      }
+
+      .icon-inner {
+        display: none;
+      }
+    }
+
+    ion-label {
+        margin-bottom: unset;
+        font-size: 10px;
+        font-weight: bold;
+    }
+  }
+}

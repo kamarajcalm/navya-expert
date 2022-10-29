@@ -1,0 +1,118 @@
+
+.home-container {
+  --background: var(--ion-home-page-background);
+
+  .navya-icon-bell:before {
+    font-weight: bold;
+  }
+
+  ion-list {
+    padding: 0px;
+  }
+
+  ion-list-header {
+    --background: var(--ion-home-page-background);
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  ion-item {
+    border-top: 1px solid #ddd;
+    font-size: 18px;
+    --padding-start: 0px;
+    --ion-safe-area-left: 0px;
+    cursor: default;
+
+    &:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+
+    ion-label, span {
+      display: inline-block;
+      padding: 13px 54px;
+      margin: 0;
+      text-overflow: none;
+    }
+
+    ion-badge {
+      background: transparent;
+      color: var(--ion-avatar-text-color);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    i.icon {
+      position: relative;
+      left: 16px;
+      bottom: 12px;
+      font-size: 30px;
+
+      &:before {
+        position: absolute;
+      }
+
+      &.ion-checkmark-round, &.medium {
+        font-size: 25px;
+      }
+
+    }
+  }
+
+  .opt-list-item {
+
+      ion-icon {
+        --color: var(--ion-home-nav-icon-color);
+      }
+
+      .home-nav-icons {
+        font-size: 20px;
+      }
+
+      i.icon {
+
+        &.navya-icon-priority {
+          color: var(--ion-avatar-priority);
+        }
+
+        &.navya-icon-pending {
+          color: var(--ion-avatar-pending);
+        }
+
+        &.navya-icon-overdue {
+          color: var(--ion-avatar-overdue);
+        }
+
+        &.ion-checkmark-round {
+          color: var(--ion-avatar-done);
+        }
+      }
+
+  }
+
+  .header-section  {
+    border-top: 1px solid var(--ion-items-border-color);
+  }
+
+  .notification-item {
+
+    i {
+      font-size: 25px;
+      color: #597B8D;
+      position: absolute !important;
+      top: 17px;
+    }
+
+    span {
+      font-size: 16px;
+      color: var(--ion-avatar-text-color);
+      display: inline-block;
+      width: 100%;
+    }
+
+    .navya-icon-bell {
+      color: var(--ion-avatar-text-color);
+    }
+  }
+}

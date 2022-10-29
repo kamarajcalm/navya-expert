@@ -1,0 +1,40 @@
+
+.signup-container {
+  // margin-bottom: 5px;
+  // position: relative;
+  // bottom: 15px;
+  color: #ffffff;
+
+  .header {
+    max-width: 250px;
+    margin: auto;
+  }
+
+  ion-button {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 63px;
+  }
+
+  ion-item {
+    border-radius: 5px;
+    margin-top: 62px;
+  }
+}
+
+@media screen and (max-width: 576px) {  
+
+  .signup-container {
+    ion-button {
+      margin-top: 28px;
+    }
+  
+    form {
+      margin-top: 20px;
+    }
+    
+    ion-item {
+      margin-top: 0px;
+    }
+  }
+}

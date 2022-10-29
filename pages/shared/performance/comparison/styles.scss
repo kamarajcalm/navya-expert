@@ -1,0 +1,29 @@
+
+.comparison-container {
+
+  ion-item {
+    border-bottom: 1px solid var(--ion-items-border-color);
+  }
+
+  select {
+    margin-left: 20px;
+    background: none;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .comparison-container {
+
+    margin-bottom: 50px;
+
+    select {
+      direction: ltr;
+      position: absolute;
+      right: 20px;
+      max-width: 225px;
+      min-width: 200px;
+    }
+  }
+}

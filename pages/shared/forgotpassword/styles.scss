@@ -1,0 +1,32 @@
+
+.forgot-password-container {
+  margin-bottom: 5px;
+  position: relative;
+  bottom: 15px;
+
+  .link {
+    margin-top: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+.forgot-pwd-form.form-container {
+
+  ion-item {
+    border-radius: 5px;
+  }
+}
+
+.mskcc, .pm, .accesshope {
+  .forgot-password-container .link {
+    color: #fff;
+    font-weight: 400;
+  }
+}

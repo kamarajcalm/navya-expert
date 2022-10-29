@@ -1,0 +1,31 @@
+
+.form-container {
+  width: 100%;
+  max-width: 275px;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+
+  p.text {
+    margin-bottom: 25px
+  }
+
+  ion-item {
+
+    --border-width: 0;
+    --highlight-background: none;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    text-align: center;
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    &:nth-child(2) {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}

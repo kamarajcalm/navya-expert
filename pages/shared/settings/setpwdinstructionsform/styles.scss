@@ -1,0 +1,28 @@
+
+.password-instructions {
+  max-width: 310px;
+  margin: auto;
+  font-size: 0.75rem;
+
+  dd {
+
+    display: flex;
+
+    i.icon {
+      color: red;
+      min-width: 15px;
+      position: relative;
+      top: 2px;
+    }
+
+    &.active, &.active i.icon {
+      color: green;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 1px;
+    }
+  }
+
+}

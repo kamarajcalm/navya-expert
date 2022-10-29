@@ -1,0 +1,111 @@
+
+@import '../../styles/mixins.scss';
+
+.tabbed-interface {
+
+  height: calc(100% - 43px);
+  .acceptance{
+    &.active {
+      color: var(--ion-avatar-pending)!important;
+      border-bottom-color: var(--ion-avatar-pending)!important;
+  }}
+  .review{
+    &.active {
+      color: var(--ion-avatar-overdue)!important;
+      border-bottom-color: var(--ion-avatar-overdue)!important;
+  }}
+  .qc{
+    &.active {
+      color: var(--ion-avatar-priority)!important;
+      border-bottom-color: var(--ion-avatar-priority)!important;
+  }}
+  .cases{
+    &.active {
+      color: var(--ion-avatar-done)!important;
+      border-bottom-color: var(--ion-avatar-done)!important;
+  }}
+  
+  .tab-label {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: 400;
+    color: #828282;
+    font-family: var(--ion-avatar-h1-font-family);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    ion-header {
+      display: none;
+      position: absolute;
+      left: 0;
+    }
+
+    &.active {
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+      @include surveyTabHighlightedColor(var(--ion-avatar-top-navbar));
+
+      ion-header {
+          display: block;
+      }
+    }
+  }
+
+  ion-header {
+    border-bottom: 1px solid var(--ion-items-border-color);
+    background-image: linear-gradient(0deg, var(--ion-items-border-color), var(--ion-items-border-color) 50%, transparent 50%);
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+  }
+
+  > ion-content {
+    height: calc(100% - 45px - 50px);
+
+    // &.bottom-tab {
+    //   height: calc(100% - 45px - 50px);
+    // }
+  }
+
+  > ion-content.subtab {
+    height: calc(100% - 45px - 50px - 45px);
+    position: relative;
+    top: 45px;
+  }
+}
+@media screen and (max-width: 932px) {
+  .tabbed-interface{
+    .tab-label {
+      font-size: 14px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabbed-interface{
+    .tab-label {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .tabbed-interface ion-header ion-header {
+    font-size: 14px !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width:450px) {
+  
+
+  .tabbed-interface{
+    .acceptance, .review, .cases,.qc{
+      font-size: 7px !important;
+   }
+    
+  }
+}

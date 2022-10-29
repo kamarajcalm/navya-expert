@@ -1,0 +1,140 @@
+
+.profile-container {
+
+  // padding-left: 30px;
+  padding: 15px 30px;
+  // padding-right: 30px;
+  color: #000;
+  font-size: 14px;
+
+  > div {
+    padding-bottom: 5px;
+  }
+}
+
+.password-reset-message {
+  font-size: 14px;
+  border-top: 1px solid var(--ion-items-border-color);
+  border-bottom: 1px solid var(--ion-items-border-color);
+  padding: 5px 15px;
+  color: #000;
+}
+
+.reset-password-container > a {
+  cursor: pointer;
+}
+
+.reset-password-validation {
+  margin: auto;
+  font-size: 15px;
+}
+
+.set-password-instructions {
+  margin-top: 30px !important;
+  text-align: center;
+}
+
+.set-password-form {
+  margin-top: 30px !important;
+}
+
+.general-container {
+
+  ion-item {
+    border-top: 1px solid #ddd;
+    font-size: 16px;
+
+    &:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+    ion-label, span {
+      display: inline-block;
+      padding: 10px 10px 10px 10px;
+      margin: 0;
+      text-overflow: none;
+      cursor: default;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: default;
+      width: inherit;
+      height: inherit;
+      display: block;
+      color: inherit;
+    }
+
+  }
+}
+
+ion-item-divider {
+  .expand, .collapse {
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+}
+
+.about {
+
+  .about-header {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    min-height: 30px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-bottom: 1px #ddd solid;
+    img {
+      height: 50px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  .about-body {
+    padding: 10px;
+
+    h1 {
+      font-size: 20px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 10px 0px;
+      margin: 0px;
+    }
+
+    .card {
+      padding-top: 1px;
+      padding-bottom: 1px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      margin: 20px 10px;
+      border-radius: 2px;
+      background-color: #fff;
+
+      .item {
+        white-space: normal;
+        font-size: 14px;
+        margin-right: 0;
+        margin-left: 0;
+        border-color: #ddd;
+        background-color: #fff;
+        color: #444;
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin: -1px;
+        padding: 16px;
+        border-width: 1px;
+        border-style: solid;
+      }
+    }
+  }
+}

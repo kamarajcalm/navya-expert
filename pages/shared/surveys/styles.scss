@@ -1,0 +1,543 @@
+
+@import '../../../styles/mixins.scss';
+
+.search-modal-container {
+  .page-header-container ion-toolbar {
+    --background: unset;
+    --ion-text-color: unset;
+  }
+
+  ion-searchbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.surveys-page-container, .search-modal-container {
+
+  .viewed-submitted-status {
+    min-width: 150px;
+    max-width: 300px;
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    font-weight: 400;
+    color: #000;
+
+    span {
+      display: block;
+    }
+  }
+
+  .secondary.survey-id + .viewed-submitted-status {
+    bottom: 10px;
+    font-size: unset;
+    height: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  }
+
+  .no-results-container {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  .survey-list-container {
+    height: calc(100vh - 50px - 43px - 44px);
+  }
+
+  ion-item.survey-item {
+    display: flex;
+    flex-direction: row;
+    min-height: 82px;
+    border-bottom: 1px solid var(--ion-items-border-color);
+
+    cursor: default;
+   .survey-item-button{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: row;
+
+         height: fit-content;
+         width: fit-content;
+         position: absolute;
+         top:25%;
+         left: 80%;
+
+
+
+   }
+    .survey-item-meta {
+
+      height: 60px;
+      width: 42px;
+      text-align: center;
+      color: lightgrey;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      top: 1px;
+      right: 6px;
+
+
+      i {
+        font-size: 30px;
+      }
+
+      span.icon-number {
+        position: relative;
+        bottom: 7px;
+        display: block;
+      }
+    }
+
+    .survey-item-info {
+
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 300;
+      color: rgb(128, 128, 128);
+
+
+      .badge {
+        border: 2px solid var(--ion-color-overdue);
+        color: var(--ion-color-overdue);
+        font-weight: 500;
+        font-size: 14px;
+        padding: 0.5px 8px;
+        position: absolute;
+        top: 7px;
+        right: 30%;
+        border-radius: 10px;
+        display: inline-block;
+
+      }
+      .badge1{
+        border: 2px solid var(--ion-color-overdue);
+        color: var(--ion-color-overdue);
+        font-weight: 500;
+        font-size: 14px;
+        padding: 0.5px 8px;
+        position: absolute;
+        top: 7px;
+        right: 8px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      .primary {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(68, 68, 68);
+      }
+    }
+
+    &.debug.debug-data {
+      .survey-item-info .badge {
+        top: 1px;
+      }
+    }
+  }
+}
+
+.surveys-page-container {
+
+  ion-content {
+    text-align: center;
+
+    h1{
+      font-size: 20px;
+      font-weight: 100;
+      padding-top: 20px;
+      line-height: 1.5;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    h2{
+      font-size: 16px;
+      font-weight: 100;
+      padding-top: 10px;
+      line-height: 1.5;
+    }
+
+    .bottom-logo-container {
+      display: flex;
+      // flex-flow: row wrap;
+      justify-content: center;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-flow: row wrap;
+
+      ion-img {
+        max-height: 120px;
+        margin: 10px;
+        height: 70px;
+        width: 140px;
+      }
+
+    }
+  }
+
+  .search-bar {
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px;
+  }
+
+  .tab-label.active {
+
+    &.color-priority {
+      @include surveyTabHighlightedColor(var(--ion-color-priority));
+    }
+
+    &.color-pending, &.color-new {
+      @include surveyTabHighlightedColor(var(--ion-color-pending));
+    }
+
+    &.color-overdue {
+      @include surveyTabHighlightedColor(var(--ion-color-overdue));
+    }
+
+    &.color-done {
+      @include surveyTabHighlightedColor(var(--ion-color-done));
+    }
+
+  }
+
+  // ion-refresher {
+  //   z-index: 10;
+  //   position: relative;
+  //
+  //
+  //   ion-refresher-content {
+  //     border-bottom: 1px solid var(--ion-items-border-color);
+  //     color: var(--ion-color-navya-dark);
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //
+  //   }
+  //
+  // }
+
+}
+
+
+.search-modal-container {
+
+  .modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &.content-shown .modal-wrapper {
+    --height: 100%;
+  }
+
+  ion-searchbar {
+
+    .searchbar-input{
+      font-size: 14px !important;
+    }
+
+    .searchbar-input-container.sc-ion-searchbar-ios {
+
+      ion-icon {
+        margin-left: 5px !important;
+      }
+
+      .searchbar-input {
+        padding-left: 40px !important;
+      }
+    }
+
+    .modal-close {
+      order: 1;
+      font-size: 14px;
+      padding-left: 10px;
+    }
+
+  }
+}
+
+.mskcc .surveys-page-container, .pm .surveys-page-container, .accesshope .surveys-page-container {
+  .bottom-logo-container ion-img {
+    width: unset;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (max-height: 1400px),
+(min-width: 768px) and (max-width: 1400px) and (max-height: 1024px) {
+
+  .mobile-app .search-modal-container {
+    ion-header ion-searchbar {
+      padding-top: 15px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .surveys-page-container, .search-modal-container {
+
+    .viewed-submitted-status {
+      // color: red;
+      position: unset;
+      font-size: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .surveys-page-container {
+
+    .done-list  {
+
+      .badge.survey-due-days {
+        font-size: 11px !important;
+      }
+
+      .clinical-diagnosis {
+        width: 140px;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+.navya-icon-priority-AH {
+  color:
+  #EC008C;
+  font-size: 20px !important;
+}
+
+.case-accepted{
+  font-size: 14px;
+  color: #0072CE;
+  font-weight: 400;
+}
+.confirm{
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+
+
+// ----------------new styles-------------------------------
+.inner-modal-container{
+  width: 708px;
+  .header{
+    background: #27B4EF;
+    padding: 15px 18px;
+    position: relative;
+    >p{
+      color: #fff;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .close-icon{
+      color: white;
+      font-size: 50px;
+      position: absolute;
+      right: 0;
+      top: 4px;
+      cursor: pointer;
+    }
+  }
+  .body-content{
+    padding: 25px;
+    >textarea{
+      border-radius: 5px;
+      border: 2px solid #EEEEEE;
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      resize: none !important;
+      padding: 10px;
+      margin: 15px 0 0 0;
+      width: 100%;
+    }
+    .reject-reason-lists{
+      // margin-top: 10px;
+      .reason-label-list{
+        display: block;
+        margin: 5px 0;
+        >span{
+          margin-left: 10px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #828282;
+          padding: 2px;
+        }
+      }
+    }
+    .word-count{
+      text-align: right;
+      color: #828282;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .btn-wrapper{
+      justify-content: end;
+      display: flex;
+      margin-top: 10px;
+    }
+  }
+}
+
+.btn-action{
+  height: 40px;
+  padding: 0 15px;
+  background-color: #27B4EF;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+.btn-cancel{
+background-color: #fff;
+border: 1px solid #828282;
+color:#828282
+}
+.btn-disabled{
+opacity: 0.5;
+}
+.btn-action:hover{
+background-color: #4ac5f7;
+}
+.btn-cancel:hover{
+background-color: #d7dcde!important;
+}
+.btn-danger{
+  background-color: #E74965!important;
+}
+.btn-secondary{
+  background-color: #7817D6!important;
+}
+.btn-danger:hover{
+  background-color: #f7738b!important;
+}
+.btn-secondary:hover{
+  background-color: #9d73c7!important;
+}
+
+
+.mr-0{
+  margin-right: 0px!important;
+}
+.age-gender-text{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 8px;
+  &:last-child{
+      margin: 0;
+  }
+}
+
+@media screen and (max-width: 932px) {
+  .case-accepted{
+    font-size: 12px;
+  }
+
+  .btn-action{
+    margin: 5px;
+    padding: 8px 15px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .inner-modal-container{
+    width: 100%;
+    min-width: 320px;
+  }
+  .age-gender-text{
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .case-accepted{
+    font-size: 10px;
+  }
+
+  .btn-action{
+    margin: 5px;
+    padding: 8px 10px;
+    height: 25px;
+    font-size: 10px;
+  }
+  .inner-modal-container{
+    width: 100%;
+    min-width:320px;
+  }
+  .age-gender-text{
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width: 450px) {
+ 
+  input[type=radio] {
+    height: 10px !important;
+}
+
+  .case-accepted{
+    font-size: 10px;
+  }
+
+  .btn-action{
+    margin: 3px;
+    padding: 0 8px;
+    height: 20px;
+    font-size: 8px;
+  }
+  .inner-modal-container{
+    width: 100%;
+    min-width:300px;
+    .header{
+      >p{
+        font-size: 15px;
+      }
+      .close-icon{
+        right: 0;
+        top: 8px;
+        font-size: 30px;
+      }
+    }
+    .reject-reason-lists{
+      margin: 2px 0;
+
+      .reason-label-list{
+        >span{
+          font-size: 12px !important;
+        }
+      }
+    }
+
+  }
+  .age-gender-text{
+    font-size: 8px;
+  }
+  .reject-question{
+    font-size: 10px;
+  }
+}
+

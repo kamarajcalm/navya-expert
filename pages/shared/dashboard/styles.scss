@@ -1,0 +1,67 @@
+.card-container {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+
+  > div {
+    padding-top: 8px;
+    padding-bottom: 5px;
+  }
+
+  .date-filter {
+    color: var(--ion-avatar-color);
+    padding-left: 8px;
+    text-transform: none;
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.04) !important;
+    }
+  }
+
+  a.dashboard-link {
+    color: var(--ion-avatar-color);
+    &:hover {
+      color: var(--ion-avatar-color-shade);
+    }
+  }
+
+
+
+  .MuiTypography-caption {
+    color: var(--ion-avatar-color)
+  }
+}
+
+.MuiToolbar-regular {
+  min-height: 48px !important;
+}
+
+.MuiTypography-caption {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+.mskcc-summary-dashboard-data-section {
+  padding: 0 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .dashboard-footer {
+    display: none;
+  }
+
+  .card-container .date-filter {
+    padding-left: 6px;
+  }
+
+  .date-filter:after {
+    content: 'Filter' !important;
+    display: inline-block;
+  }
+
+  .date-filter > span { display: none; }
+
+  .mskcc-summary-dashboard-data-section {
+    padding: 0;
+  }
+}
